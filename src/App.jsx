@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import './App.css'
 import { requestNotificationPermission, sendNotification } from './services/notificationService'
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
 
 function App() {
   useEffect(() => {
@@ -15,9 +17,9 @@ function App() {
   }
 
   return (
-    <div className='bg-red-500 w-full h-full'>
-      <button onClick={handleNotify}>Clique</button>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home/>} />
+    </Routes>
   )
 }
 
