@@ -3,6 +3,7 @@ import './App.css'
 import { requestNotificationPermission, sendNotification } from './services/notificationService'
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
+import Medicacoes from './pages/Medicacoes';
 
 function App() {
   useEffect(() => {
@@ -19,6 +20,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home/>} />
+      <Route path="/medicacoes" element={<Medicacoes/>}/>
     </Routes>
   )
 }

@@ -1,8 +1,15 @@
 import { DogIcon } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 function PetCard(){
+    const navigate = useNavigate();
+
+    function irParaMedicacoes(){
+        navigate('/medicacoes')
+    }
+
     return (
-        <div className="w-72 bg-white pb-5 rounded-xl shadow-lg cursor-pointer hover:scale-[1.03] duration-300">
+        <div onClick={irParaMedicacoes} className="w-72 bg-white pb-5 rounded-xl shadow-lg cursor-pointer hover:scale-[1.03] duration-300">
             <div className="bg-gray-200 rounded-t-xl py-20 flex content-center justify-center">
                 <DogIcon size={64}/>
             </div>
